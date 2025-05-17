@@ -1,0 +1,10 @@
+from langchain_community.retrievers import WikipediaRetriever
+
+
+wikipedia_retriever = WikipediaRetriever(top_k_results=2, lang="en")
+
+query_input = input("Enter your query : ")
+
+retiever_output = wikipedia_retriever.invoke(query_input)
+
+print(retiever_output)
